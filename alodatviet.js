@@ -20,13 +20,11 @@ async function main()
 						break;
 					}
 			}
-		console.log(dienthoai);
+		//console.log(dienthoai);
+		if(typeof(dienthoai)!= "undefined")
+		document.querySelector("#homepage > div.uk-container.uk-container-center > div > div.uk-width-large-2-3 > section > section > form > div:nth-child(7) > div.content_content > div:nth-child(1) > div.label-right.uk-width-1-1.bdl0 > label > input").value = dienthoai;
 		}
 	}
 }
 
 main();
-
-
-
-
