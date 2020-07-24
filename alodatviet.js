@@ -9,7 +9,7 @@ async function main()
 	{
 		await sleep(50);
 		count++;
-	}
+	} count = 0;
 	if(document.getElementsByClassName("cke_wysiwyg_frame cke_reset")[0].contentWindow.document.body == null) return;
 	document.getElementsByClassName("cke_wysiwyg_frame cke_reset")[0].contentWindow.document.body.setAttribute("onkeyup", "getPhone()");
 	document.getElementsByClassName("cke_wysiwyg_frame cke_reset")[0].contentWindow.document.body.getPhone = function()
