@@ -1,6 +1,16 @@
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 async function main()
 {
-	await(document.getElementsByClassName("cke_wysiwyg_frame cke_reset")[0].contentWindow.document.body != null);
+	var count = 0;
+	while(document.getElementsByClassName("cke_wysiwyg_frame cke_reset")[0].contentWindow.document.body == null && count < 400);
+	{
+		await sleep(50);
+		count++;
+	}
+	if(document.getElementsByClassName("cke_wysiwyg_frame cke_reset")[0].contentWindow.document.body == null) return;
 	document.getElementsByClassName("cke_wysiwyg_frame cke_reset")[0].contentWindow.document.body.setAttribute("onkeyup", "getPhone()");
 	document.getElementsByClassName("cke_wysiwyg_frame cke_reset")[0].contentWindow.document.body.getPhone = function()
 	{
