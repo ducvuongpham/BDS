@@ -36,5 +36,5 @@ async function main()
 		}
 	}
 }
-
+// Test
 main();
